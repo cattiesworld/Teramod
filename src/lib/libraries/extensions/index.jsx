@@ -356,7 +356,7 @@ const menuItems = [
         extensionId: 'https://sharkpools-extensions.vercel.app/extension-code/Files-Expanded.js',
         extDeveloper: 'SharkPool',
         iconURL: filesExtensionIcon,
-        tags: ['turbowarp', 'datamgmt'],
+        tags: ['turbowarp', 'datamgmt', 'test'],
         description: 'Blocks for reading, editing, & creating files & folders.',
         featured: true
     },
@@ -1254,6 +1254,8 @@ These extensions could have missing features, cause random errors, broken projec
 Moving these into the main extension list will cause people who use your fork to assume they are ready for them to use!
 
 Please keep these in livetests to reduce bug reports on your fork! :)
+
+sure bro no pwoblem
 ----------------------------------------------
 */
 if (IsLocal || IsLiveTests) {
