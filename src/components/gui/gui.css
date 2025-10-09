@@ -77,14 +77,16 @@
     height: 80%;
     margin-bottom: 0;
 
-    border-radius: 1rem 1rem 0 0;
+    transition: .1s;
+
+    border-radius: .5rem .5rem 0 0;
     border: 1px solid $ui-black-transparent;
 
     padding: 0.125rem 1.25rem 0;
     font-size: 0.75rem;
 
     background-color: $ui-tertiary;
-    color: $text-primary-transparent;
+    color: gray;
 
     display: flex;
     justify-content: center;
@@ -92,6 +94,7 @@
 
     user-select: none;
     white-space: nowrap;
+    
 }
 [theme="dark"] .tab {
     color: $text-primary;
@@ -100,6 +103,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 100px;
 }
 .tab-disabled {
     display: none;
@@ -111,7 +115,7 @@
     padding: 4px;
     font-size: larger;
 
-    background: white;
+    background: $ui-secondary;
     border: 1px solid rgba(0,0,0,.15);
     border-radius: 4px;
 
@@ -181,12 +185,12 @@
 
 .tab.is-selected {
     height: 90%;
-    color: $motion-primary;
-    background-color: $ui-white;
+    background-color: $motion-primary;
+    color: $ui-white;
     z-index: 4; /* Make sure selected is always above */
 }
 [theme="dark"] .tab.is-selected {
-    background-color: $ui-secondary;
+    background-color: $motion-primary-dark;
 }
 
 .tab img {
