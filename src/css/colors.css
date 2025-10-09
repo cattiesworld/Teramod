@@ -17,6 +17,7 @@ $text-primary-transparent: hsla(225, 15%, 40%, 0.75);
 
 $motion-primary: hsla(206, 75%, 42%, 1); /* MAIN THEME */
 $motion-primary-darker: hsla(206, 45%, 42%, 1); /* MAIN THEME DARKER */
+
 $motion-tertiary: hsla(203, 100%, 39%, 1); /* #007bc7 */
 $motion-transparent: hsla(206, 75%, 42%, 0.35); /* 35% transparent version of main theme */
 $motion-light-transparent: hsla(206, 75%, 42%, 0.15); /* 15% transparent version of main theme */
