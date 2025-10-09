@@ -1,4 +1,4 @@
-scratch-gui modified for use in [TurboWarp](https://turbowarp.org/) then modified for use in [PenguinMod](https://cattiesworld.github.io/Teramod) 😀
+scratch-gui modified for use in [TurboWarp](https://turbowarp.org/) then modified for use in [TeraMod](https://cattiesworld.github.io/Teramod) 😀
 ## Setup
 
 See https://docs.turbowarp.org/development/getting-started to setup the complete TurboWarp environment.
