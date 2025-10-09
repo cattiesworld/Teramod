@@ -178,6 +178,7 @@
 
 .tab:hover {
   background-color: $ui-primary;
+  height: 85%;
 }
 [theme="dark"] .tab:hover {
     background-color: $ui-secondary;
@@ -191,6 +192,10 @@
 }
 [theme="dark"] .tab.is-selected {
     background-color: $motion-primary-dark;
+}
+
+.tab:active {
+    height: 70%;
 }
 
 .tab img {
