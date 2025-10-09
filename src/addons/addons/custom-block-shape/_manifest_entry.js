@@ -21,7 +21,7 @@ const manifest = {
       "link": "https://scratch.mit.edu/users/GarboMuffin/"
     }
   ],
-  "enabledByDefault": false,
+  "enabledByDefault": true,
   "dynamicDisable": true,
   "userscripts": [
     {
@@ -41,9 +41,9 @@ const manifest = {
       "name": "Padding size (50-200%)",
       "id": "paddingSize",
       "type": "integer",
-      "min": 50,
-      "default": 100,
-      "max": 200
+      "min": 10,
+      "default": 85,
+      "max": 500
     },
     {
       "dynamic": true,
@@ -52,7 +52,7 @@ const manifest = {
       "type": "integer",
       "min": 0,
       "default": 100,
-      "max": 300
+      "max": 500
     },
     {
       "dynamic": true,
@@ -61,7 +61,7 @@ const manifest = {
       "type": "integer",
       "min": 0,
       "default": 100,
-      "max": 150
+      "max": 300
     }
   ],
   "presets": [
@@ -105,6 +105,6 @@ const manifest = {
         "notchSize": 0
       }
     }
-  ]
+  ],
 };
 export default manifest;

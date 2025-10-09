@@ -322,6 +322,16 @@ $fade-out-distance: 15px;
     width: 100%;
     height: 100%;
     cursor: pointer;
+    transition: .1s;
+}
+
+.extension-button:hover {
+    transform: scale(1.3);
+}
+
+.extension-button:active {
+    transform: scale(1.3);
+    filter: brightness(.8);
 }
 
 .extension-button-icon {
@@ -356,7 +366,7 @@ $fade-out-distance: 15px;
 
 .menu-bar-position {
     position: relative;
-    z-index: $z-index-menu-bar;
+    z-index: $z-index-menu-bar;height: 40px;
 }
 /* Alerts */
 

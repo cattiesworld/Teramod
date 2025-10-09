@@ -49,7 +49,7 @@ describe('Menu bar settings', () => {
             '//div[contains(@class, "menu-bar_menu-bar-item") and ' +
             'contains(@class, "menu-bar_hoverable")][span[text()="File"]]'
         );
-        await findByXpath('//*[li[span[text()="Save to your computer"]] and not(@data-tip="tooltip")]');
+        await findByXpath('//*[li[span[text()="Save"]] and not(@data-tip="tooltip")]');
     });
 
     test('Share button should NOT be enabled', async () => {

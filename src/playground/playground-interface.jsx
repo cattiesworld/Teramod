@@ -71,9 +71,9 @@ class Interface extends React.Component {
     }
     handleUpdateProjectTitle(title, isDefault) {
         if (isDefault || !title) {
-            document.title = `TeraMod - ${this.props.intl.formatMessage(messages.defaultTitle)}`;
+            document.title = `TeraMod | ${this.props.intl.formatMessage(messages.defaultTitle)}`;
         } else {
-            document.title = `${title} - TeraMod`;
+            document.title = `${title} | TeraMod`;
         }
     }
     render() {

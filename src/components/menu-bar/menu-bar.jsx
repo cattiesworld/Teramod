@@ -680,7 +680,7 @@ class MenuBar extends React.Component {
                                                             />
                                                         ) : (
                                                             <FormattedMessage
-                                                                defaultMessage="Save to your computer"
+                                                                defaultMessage="Save"
                                                                 description="Menu bar item for downloading a project to your computer" // eslint-disable-line max-len
                                                                 id="gui.menuBar.downloadToComputer"
                                                             />

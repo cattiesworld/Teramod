@@ -1,6 +1,7 @@
 // Editor Animations (remake of Reactive Animation by <https://github.com/mmmmaaaaarrrrrrkkkkkkkk>)
 // By: SharkPool
 // By: reflow <https://github.com/mgikdev>
+// Modified by: Greedy Allay
 
 export default async function({ addon }) {
   const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -51,7 +52,7 @@ export default async function({ addon }) {
     transform: scale(1.05);
 }
 .${addonKey}top-bar-scaler:active:not([addon-scale-stop="true"]) {
-    transform: scale(.95);
+    filter: brightness(.8);
 }
 
 /*
@@ -59,7 +60,7 @@ export default async function({ addon }) {
   Costume/Extension/Sprite/Sound Library UI
 */
 .${addonKey}static-scaler {
-    transition: transform ${getAnim(.1)};
+    transition: transform ${getAnim(.05)};
     transform-origin: center center;
     transform-box: fill-box;
 }
@@ -67,7 +68,7 @@ export default async function({ addon }) {
     transform: scale(1.05);
 }
 .${addonKey}static-scaler:active:not([addon-scale-stop="true"]) {
-    transform: scale(.95);
+    filter: brightness(.8);
 }
 
 /*
@@ -83,7 +84,7 @@ export default async function({ addon }) {
     transform: scale(1.1);
 }
 .${addonKey}static-scaler-big:active {
-    transform: scale(.9);
+    filter: brightness(.8);
 }
 
 /* Custom Extension Button (Library) */
@@ -96,7 +97,7 @@ export default async function({ addon }) {
   border: solid 3px #00000050;
 }
 .${addonKey}custom-ext-hover:active {
-  transform: scale(.95);
+    filter: brightness(.8);
   border: none;
 }
 
@@ -107,10 +108,10 @@ export default async function({ addon }) {
     transform-box: fill-box;
 }
 .${addonKey}library-item-scaler div[class^="library-item_library-item"]:hover {
-    transform: scale(1.05);
+    transform: scale(1.01);
 }
 .${addonKey}library-item-scaler div[class^="library-item_library-item"]:active {
-    transform: scale(.95);
+    filter: brightness(.8);
 }
 
 /* Categories */
@@ -123,7 +124,7 @@ export default async function({ addon }) {
     transform: scale(1.05);
 }
 .${addonKey}category-scaler div div[class="scratchCategoryMenuRow"]:active {
-    transform: scale(.95);
+    filter: brightness(.8);
 }
 `;
 

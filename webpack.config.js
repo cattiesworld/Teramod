@@ -167,35 +167,35 @@ module.exports = [
                 chunks: ['editor'],
                 template: 'src/playground/index.ejs',
                 filename: 'editor.html',
-                title: 'TeraMod - Editor',
+                title: 'TeraMod | Editor',
                 ...htmlWebpackPluginCommon
             }),
             new HtmlWebpackPlugin({
                 chunks: ['playground'],
                 template: 'src/playground/index.ejs',
                 filename: 'playground.html',
-                title: 'TeraMod - Playground',
+                title: 'TeraMod | Playground',
                 ...htmlWebpackPluginCommon
             }),
             new HtmlWebpackPlugin({
                 chunks: ['player'],
                 template: 'src/playground/index.ejs',
                 filename: 'index.html',
-                title: 'TeraMod - A mod of TurboWarp',
+                title: 'TeraMod | A mod of TurboWarp',
                 ...htmlWebpackPluginCommon
             }),
             new HtmlWebpackPlugin({
                 chunks: ['fullscreen'],
                 template: 'src/playground/index.ejs',
                 filename: 'fullscreen.html',
-                title: 'TeraMod - A mod of TurboWarp',
+                title: 'TeraMod | A mod of TurboWarp',
                 ...htmlWebpackPluginCommon
             }),
             new HtmlWebpackPlugin({
                 chunks: ['embed'],
                 template: 'src/playground/index.ejs',
                 filename: 'embed.html',
-                title: 'Embedded Project - TeraMod',
+                title: 'Embedded Project | TeraMod',
                 noTheme: true,
                 ...htmlWebpackPluginCommon
             }),
@@ -203,7 +203,7 @@ module.exports = [
                 chunks: ['addon-settings'],
                 template: 'src/playground/simple.ejs',
                 filename: 'addons.html',
-                title: 'Addon Settings - TeraMod',
+                title: 'Addon Settings | TeraMod',
                 ...htmlWebpackPluginCommon
             }),
             new HtmlWebpackPlugin({

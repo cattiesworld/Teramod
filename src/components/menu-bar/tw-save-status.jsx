@@ -32,7 +32,7 @@ const TWSaveStatus = ({
                     />
                 ) : (
                     <FormattedMessage
-                        defaultMessage="Save to your computer"
+                        defaultMessage="Save"
                         description="Menu bar item for downloading a project to your computer"
                         id="gui.menuBar.downloadToComputer"
                     />

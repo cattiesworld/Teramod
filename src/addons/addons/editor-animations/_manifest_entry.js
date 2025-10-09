@@ -10,6 +10,9 @@ const manifest = {
     },
     {
       "name": "SharkPool"
+    },
+    {
+      "name": "GreedyAllay"
     }
   ],
   "info": [
