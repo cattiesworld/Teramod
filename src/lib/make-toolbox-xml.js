@@ -23,8 +23,6 @@ const motion = function (isInitialSetup, isStage, targetId) {
         ${isStage ? `
         <label text="${stageSelected}"></label>
         ` : `
-        <block type="motion_test">
-        </block>
         <block type="motion_movesteps">
             <value name="STEPS">
                 <shadow type="math_number">
@@ -1476,33 +1474,9 @@ const myBlocks = function () {
 
 const liveTests = function () {
     return `
-    <category name="Live Tests" id="liveTests" colour="#FF0000" secondaryColour="#FF0000">
-        <block type="procedures_call">
-            <mutation proccode="tw:debugger;" argumentids="[]" warp="false" returns="null" edited="true" optype="null"></mutation>
+    <category name="Testing" id="liveTests" colour="#c02020ff" secondaryColour="#ca2828ff">
+        <block type="motion_test">
         </block>
-        ${blockSeparator}
-        <block type="operator_expandableBool">
-            <mutation inputcount="2" menuvalues=""></mutation>
-            <value name="BOOL1">
-                <shadow type="checkbox"><field name="CHECKBOX"></field></shadow>
-            </value>
-            <value name="BOOL2">
-                <shadow type="checkbox"><field name="CHECKBOX"></field></shadow>
-            </value>
-        </block>
-        <block type="operator_expandableCompare">
-        <mutation inputcount="2" menuvalues=""></mutation>
-            <value name="INPUT1">
-                <shadow type="text"><field name="TEXT"></field></shadow>
-            </value>
-            <value name="INPUT2">
-                <shadow type="text"><field name="TEXT"></field></shadow>
-            </value>
-        </block>
-        <block type="control_fieldbutton"></block>
-        <block type="motion_mutatorCheckboxTest"></block>
-        ${blockSeparator}
-        <block type="control_dualblock"></block>
     </category>
     `;
 };

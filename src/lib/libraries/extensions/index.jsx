@@ -191,28 +191,28 @@ const IsLocal = String(window.location.href).startsWith(`http://localhost:`);
 const IsLiveTests = urlParams.has('livetests');
 
 const menuItems = [
-    {
-        name: (
-            <FormattedMessage
-                defaultMessage="Music"
-                description="Name for the 'Music' extension"
-                id="gui.extension.music.name"
-            />
-        ),
-        extensionId: 'music',
-        iconURL: musicIconURL,
-        insetIconURL: musicInsetIconURL,
-        customInsetColor: '#CF63CF',
-        tags: ['scratch', 'noisemaker'],
-        description: (
-            <FormattedMessage
-                defaultMessage="Play instruments and drums."
-                description="Description for the 'Music' extension"
-                id="gui.extension.music.description"
-            />
-        ),
-        featured: true
-    },
+    // {
+    //     name: (
+    //         <FormattedMessage
+    //             defaultMessage="Music"
+    //             description="Name for the 'Music' extension"
+    //             id="gui.extension.music.name"
+    //         />
+    //     ),
+    //     extensionId: 'music',
+    //     iconURL: musicIconURL,
+    //     insetIconURL: musicInsetIconURL,
+    //     customInsetColor: '#CF63CF',
+    //     tags: ['scratch', 'noisemaker'],
+    //     description: (
+    //         <FormattedMessage
+    //             defaultMessage="Play instruments and drums."
+    //             description="Description for the 'Music' extension"
+    //             id="gui.extension.music.description"
+    //         />
+    //     ),
+    //     featured: false
+    // },
     {
         name: (
             <FormattedMessage
@@ -274,85 +274,88 @@ const menuItems = [
         description: 'Sense faces with the camera.',
         featured: true
     },
+    // {
+    //     name: (
+    //         <FormattedMessage
+    //             defaultMessage="Text to Speech"
+    //             description="Name for the Text to Speech extension"
+    //             id="gui.extension.text2speech.name"
+    //         />
+    //     ),
+    //     extensionId: 'text2speech',
+    //     collaborator: 'Amazon Web Services',
+    //     credits: 'Google TTS',
+    //     iconURL: text2speechIconURL,
+    //     insetIconURL: text2speechInsetIconURL,
+    //     customInsetColor: '#9966FF',
+    //     tags: ['scratch', 'noisemaker'],
+    //     description: (
+    //         <FormattedMessage
+    //             defaultMessage="Make your projects talk."
+    //             description="Description for the Text to speech extension"
+    //             id="gui.extension.text2speech.description"
+    //         />
+    //     ),
+    //     featured: false,
+    //     internetConnectionRequired: true
+    // },
+    // {
+    //     name: (
+    //         <FormattedMessage
+    //             defaultMessage="Translate"
+    //             description="Name for the Translate extension"
+    //             id="gui.extension.translate.name"
+    //         />
+    //     ),
+    //     extensionId: 'translate',
+    //     collaborator: 'Google',
+    //     iconURL: translateIconURL,
+    //     insetIconURL: translateInsetIconURL,
+    //     customInsetColor: '#5CB1D6',
+    //     tags: ['scratch'],
+    //     description: (
+    //         <FormattedMessage
+    //             defaultMessage="Translate text into many languages."
+    //             description="Description for the Translate extension"
+    //             id="gui.extension.translate.description"
+    //         />
+    //     ),
+    //     featured: true,
+    //     internetConnectionRequired: true
+    // },
+    // {
+    //     name: 'Makey Makey',
+    //     extensionId: 'makeymakey',
+    //     collaborator: 'JoyLabz',
+    //     iconURL: makeymakeyIconURL,
+    //     insetIconURL: makeymakeyInsetIconURL,
+    //     customInsetColor: '#E64D00',
+    //     tags: ['scratch', 'hardware'],
+    //     description: (
+    //         <FormattedMessage
+    //             defaultMessage="Make anything into a key."
+    //             description="Description for the 'Makey Makey' extension"
+    //             id="gui.extension.makeymakey.description"
+    //         />
+    //     ),
+    //     featured: false
+    // },
     {
-        name: (
-            <FormattedMessage
-                defaultMessage="Text to Speech"
-                description="Name for the Text to Speech extension"
-                id="gui.extension.text2speech.name"
-            />
-        ),
-        extensionId: 'text2speech',
-        collaborator: 'Amazon Web Services',
-        credits: 'Google TTS',
-        iconURL: text2speechIconURL,
-        insetIconURL: text2speechInsetIconURL,
-        customInsetColor: '#9966FF',
-        tags: ['scratch', 'noisemaker'],
-        description: (
-            <FormattedMessage
-                defaultMessage="Make your projects talk."
-                description="Description for the Text to speech extension"
-                id="gui.extension.text2speech.description"
-            />
-        ),
-        featured: true,
-        internetConnectionRequired: true
-    },
-    {
-        name: (
-            <FormattedMessage
-                defaultMessage="Translate"
-                description="Name for the Translate extension"
-                id="gui.extension.translate.name"
-            />
-        ),
-        extensionId: 'translate',
-        collaborator: 'Google',
-        iconURL: translateIconURL,
-        insetIconURL: translateInsetIconURL,
-        customInsetColor: '#5CB1D6',
-        tags: ['scratch'],
-        description: (
-            <FormattedMessage
-                defaultMessage="Translate text into many languages."
-                description="Description for the Translate extension"
-                id="gui.extension.translate.description"
-            />
-        ),
-        featured: true,
-        internetConnectionRequired: true
-    },
-    {
-        name: 'Makey Makey',
-        extensionId: 'makeymakey',
-        collaborator: 'JoyLabz',
-        iconURL: makeymakeyIconURL,
-        insetIconURL: makeymakeyInsetIconURL,
-        customInsetColor: '#E64D00',
-        tags: ['scratch', 'hardware'],
-        description: (
-            <FormattedMessage
-                defaultMessage="Make anything into a key."
-                description="Description for the 'Makey Makey' extension"
-                id="gui.extension.makeymakey.description"
-            />
-        ),
+        name: 'Project Interfaces',
+        extensionId: 'https://lordcat.dev/assets/thumbnails/ProjectInterfacesExtension.png',
+        iconURL: 'https://lordcat.dev/assets/thumbnails/ProjectInterfacesExtension.png',
+        description: 'Easily display interfaces on your projects!',
+        tags: ['teramod'],
+        extDeveloper: 'Lord Cat',
         featured: true
     },
     {
-        name: 'Stage Camera',
-        extensionId: 'pmCamera',
-        iconURL: pmCameraExtensionIcon,
-        tags: ['penguinmod'],
-        description: (
-            <FormattedMessage
-                defaultMessage="Allows the camera to move around anywhere on the stage."
-                description="The description for the PenguinMod Camera extension."
-                id="pm.extension.camera.description"
-            />
-        ),
-        credits: 'Inspired by⠀⠀⠀⠀⠀⠀ DT-is-not-available',
+        name: 'HTML',
+        extensionId: 'https://greedyallay.github.io/extensions/resources/extensions/html.js',
+        iconURL: 'https://greedyallay.github.io/extensions/resources/html.png',
+        tags: ['teramod'],
+        description: 'Natively display and edit HTML on top of your stage. Useful for dynamic menus.',
+        extDeveloper: 'Greedy Allay',
         featured: true
     },
     {
@@ -372,6 +375,21 @@ const menuItems = [
         tags: ['turbowarp', 'datamgmt'],
         description: 'Create and edit .zip format files, including .sb3 files.',
         twDeveloper: 'CST1229',
+        featured: true
+    },
+    {
+        name: 'Stage Camera',
+        extensionId: 'pmCamera',
+        iconURL: pmCameraExtensionIcon,
+        tags: ['penguinmod'],
+        description: (
+            <FormattedMessage
+                defaultMessage="Allows the camera to move around anywhere on the stage. THIS BREAKS INTERPOLATION!!"
+                description="The description for the PenguinMod Camera extension."
+                id="pm.extension.camera.description"
+            />
+        ),
+        credits: 'Inspired by⠀⠀⠀⠀⠀⠀ DT-is-not-available',
         featured: true
     },
     {
@@ -407,6 +425,42 @@ const menuItems = [
         tags: ['penguinmod', 'noisemaker'],
         description: 'Make sounds with oscillators!',
         extDeveloper: 'SharkPool',
+        featured: true
+    },
+    {
+        name: 'Tiles',
+        extensionId: 'https://greedyallay.github.io/extensions/resources/extensions/tiles.js',
+        iconURL: 'https://greedyallay.github.io/extensions/resources/tiles.png',
+        tags: ['teramod'],
+        description: 'Easy way of rendering tiles inside of your project, e.g. for a gallery or level browser!',
+        extDeveloper: 'Greedy Allay',
+        featured: true
+    },
+    {
+        name: 'Ollama',
+        extensionId: 'https://greedyallay.github.io/extensions/resources/extensions/ollama.js',
+        iconURL: 'https://greedyallay.github.io/extensions/resources/ollama.png',
+        tags: ['teramod'],
+        description: 'Connect to your local Ollama server or an API through Scratch!',
+        extDeveloper: 'Greedy Allay',
+        featured: true
+    },
+    {
+        name: 'Simple Hashing',
+        extensionId: 'https://greedyallay.github.io/extensions/resources/extensions/hashing.js',
+        iconURL: 'https://greedyallay.github.io/extensions/resources/hashing.png',
+        tags: ['teramod'],
+        description: 'A single block that lets you hash passwords on your client!',
+        extDeveloper: 'Greedy Allay',
+        featured: true
+    },
+    {
+        name: 'On-Screen Controls',
+        extensionId: 'https://greedyallay.github.io/extensions/resources/extensions/controls.js',
+        iconURL: 'https://greedyallay.github.io/extensions/resources/controls.png',
+        tags: ['teramod'],
+        description: 'Control your projects with multitouch without a hassle!',
+        extDeveloper: 'Greedy Allay',
         featured: true
     },
     {
@@ -671,15 +725,15 @@ const menuItems = [
         description: 'Create compiled scripts with blocks while the project is running.',
         featured: true
     },
-    {
-        name: 'Pang API',
-        extensionId: 'https://extensions.penguinmod.com/extensions/SammerLOL/pangapi.js',
-        iconURL: 'https://extensions.penguinmod.com/images/SammerLOL/pangapi.avif',
-        tags: ['penguinmod'],
-        description: 'Fetch information from the PenguinMod API.',
-        extDeveloper: 'oc9x97, Ianyourgod',
-        featured: true
-    },
+    // {
+    //     name: 'Pang API',
+    //     extensionId: 'https://extensions.penguinmod.com/extensions/SammerLOL/pangapi.js',
+    //     iconURL: 'https://extensions.penguinmod.com/images/SammerLOL/pangapi.avif',
+    //     tags: ['penguinmod'],
+    //     description: 'Fetch information from the PenguinMod API.',
+    //     extDeveloper: 'oc9x97, Ianyourgod',
+    //     featured: true
+    // },
     {
         name: '3D Math',
         extensionId: 'https://extensions.penguinmod.com/extensions/ObviousAlexC/3DMath.js',
@@ -859,109 +913,127 @@ const menuItems = [
         featured: true
     },
     {
-        name: 'Arrays',
-        extensionId: 'jwArray',
-        iconURL: jwArrayExtensionThumb,
-        tags: ['penguinmod', 'datamgmt'],
-        description: 'Store data efficiently in multi-purpose arrays.',
-        extDeveloper: 'jwklong',
+        name: 'Python',
+        extensionId: 'https://extensions.mistium.com/featured/Python.js',
+        iconURL: 'https://raw.githubusercontent.com/Mistium/extensions.mistium/main/images/Python.png',
+        tags: ['teramod', 'programminglanguage'],
+        description: 'Run Python in turbowarp with piodide',
+        extDeveloper: "Mistium",
         featured: true
     },
     {
-        name: 'Objects',
-        extensionId: 'https://extensions.penguinmod.com/extensions/DogeisCut/dogeiscutObject.js',
-        iconURL: 'https://extensions.penguinmod.com/images/DogeisCut/dogeiscutObject.svg',
-        tags: ['penguinmod', 'datamgmt'],
-        description: 'Store data efficiently in multi-purpose objects.',
-        extDeveloper: 'DogeisCut',
+        name: 'Discord Bot',
+        extensionId: 'https://extensions.mistium.com/featured/Python.js',
+        iconURL: 'https://raw.githubusercontent.com/Mistium/extensions.mistium/main/images/DiscordBot.png',
+        tags: ['teramod', 'network'],
+        description: 'Run Python in turbowarp with piodide',
+        extDeveloper: "Mistium",
         featured: true
     },
-    {
-        name: 'Targets',
-        extensionId: 'jwTargets',
-        iconURL: jwTargetsExtensionThumb,
-        tags: ['penguinmod'],
-        description: 'Direct access to sprites and their clones.',
-        extDeveloper: 'jwklong',
-        featured: true
-    },
-    {
-        name: 'Infinity',
-        extensionId: 'jwNum',
-        iconURL: jwNumExtensionThumb,
-        tags: ['penguinmod', 'math'],
-        description: 'Advanced number type capable of really big numbers.',
-        extDeveloper: 'jwklong',
-        credits: 'Naruyoko for ExpantaNum.js',
-        featured: true
-    },
-    {
-        name: 'Color',
-        extensionId: 'jwColor',
-        iconURL: jwColorExtensionThumb,
-        tags: ['penguinmod', 'graphics'],
-        description: 'Utilities for anything involving colors.',
-        extDeveloper: 'jwklong',
-        featured: true
-    },
-    {
-        name: 'Vector',
-        extensionId: 'jwVector',
-        iconURL: jwVectorExtensionThumb,
-        tags: ['penguinmod', 'math'],
-        description: 'Vector type for calculating with X and Y coordinates.',
-        extDeveloper: 'jwklong',
-        featured: true
-    },
-    {
-        name: 'Lambda',
-        extensionId: 'jwLambda',
-        iconURL: jwLambdaExtensionThumb,
-        tags: ['penguinmod'],
-        description: 'Create anonymous functions with arguments and execute them.',
-        extDeveloper: 'jwklong',
-        featured: true
-    },
-    {
-        name: 'Scope',
-        extensionId: 'jwScope',
-        iconURL: jwScopeExtensionThumb,
-        tags: ['penguinmod'],
-        description: 'Temporary variables based on the block stack. (extra blocks included if Array extension is added)',
-        extDeveloper: 'jwklong',
-        featured: true
-    },
-    {
-        name: 'micro:bit',
-        extensionId: 'microbit',
-        collaborator: 'micro:bit',
-        iconURL: microbitIconURL,
-        insetIconURL: microbitInsetIconURL,
-        tags: ['scratch', 'hardware'],
-        description: (
-            <FormattedMessage
-                defaultMessage="Connect your projects with the world."
-                description="Description for the 'micro:bit' extension"
-                id="gui.extension.microbit.description"
-            />
-        ),
-        featured: true,
-        disabled: false,
-        bluetoothRequired: true,
-        internetConnectionRequired: true,
-        launchPeripheralConnectionFlow: true,
-        useAutoScan: false,
-        connectionIconURL: microbitConnectionIconURL,
-        connectionSmallIconURL: microbitConnectionSmallIconURL,
-        connectingMessage: (
-            <FormattedMessage
-                defaultMessage="Connecting"
-                description="Message to help people connect to their micro:bit."
-                id="gui.extension.microbit.connectingMessage"
-            />
-        ),
-        helpLink: 'https://scratch.mit.edu/microbit'
-    },
+    // {
+    //     name: 'Arrays',
+    //     extensionId: 'jwArray',
+    //     iconURL: jwArrayExtensionThumb,
+    //     tags: ['penguinmod', 'datamgmt'],
+    //     description: 'Store data efficiently in multi-purpose arrays.',
+    //     extDeveloper: 'jwklong',
+    //     featured: true
+    // },
+    // {
+    //     name: 'Objects',
+    //     extensionId: 'https://extensions.penguinmod.com/extensions/DogeisCut/dogeiscutObject.js',
+    //     iconURL: 'https://extensions.penguinmod.com/images/DogeisCut/dogeiscutObject.svg',
+    //     tags: ['penguinmod', 'datamgmt'],
+    //     description: 'Store data efficiently in multi-purpose objects.',
+    //     extDeveloper: 'DogeisCut',
+    //     featured: true
+    // },
+    // {
+    //     name: 'Targets',
+    //     extensionId: 'jwTargets',
+    //     iconURL: jwTargetsExtensionThumb,
+    //     tags: ['penguinmod'],
+    //     description: 'Direct access to sprites and their clones.',
+    //     extDeveloper: 'jwklong',
+    //     featured: true
+    // },
+    // {
+    //     name: 'Infinity',
+    //     extensionId: 'jwNum',
+    //     iconURL: jwNumExtensionThumb,
+    //     tags: ['penguinmod', 'math'],
+    //     description: 'Advanced number type capable of really big numbers.',
+    //     extDeveloper: 'jwklong',
+    //     credits: 'Naruyoko for ExpantaNum.js',
+    //     featured: true
+    // },
+    // {
+    //     name: 'Color',
+    //     extensionId: 'jwColor',
+    //     iconURL: jwColorExtensionThumb,
+    //     tags: ['penguinmod', 'graphics'],
+    //     description: 'Utilities for anything involving colors.',
+    //     extDeveloper: 'jwklong',
+    //     featured: true
+    // },
+    // {
+    //     name: 'Vector',
+    //     extensionId: 'jwVector',
+    //     iconURL: jwVectorExtensionThumb,
+    //     tags: ['penguinmod', 'math'],
+    //     description: 'Vector type for calculating with X and Y coordinates.',
+    //     extDeveloper: 'jwklong',
+    //     featured: true
+    // },
+    // {
+    //     name: 'Lambda',
+    //     extensionId: 'jwLambda',
+    //     iconURL: jwLambdaExtensionThumb,
+    //     tags: ['penguinmod'],
+    //     description: 'Create anonymous functions with arguments and execute them.',
+    //     extDeveloper: 'jwklong',
+    //     featured: true
+    // },
+    // {
+    //     name: 'Scope',
+    //     extensionId: 'jwScope',
+    //     iconURL: jwScopeExtensionThumb,
+    //     tags: ['penguinmod'],
+    //     description: 'Temporary variables based on the block stack. (extra blocks included if Array extension is added)',
+    //     extDeveloper: 'jwklong',
+    //     featured: true
+    // },
+    // {
+    //     name: 'micro:bit',
+    //     extensionId: 'microbit',
+    //     collaborator: 'micro:bit',
+    //     iconURL: microbitIconURL,
+    //     insetIconURL: microbitInsetIconURL,
+    //     tags: ['scratch', 'hardware'],
+    //     description: (
+    //         <FormattedMessage
+    //             defaultMessage="Connect your projects with the world."
+    //             description="Description for the 'micro:bit' extension"
+    //             id="gui.extension.microbit.description"
+    //         />
+    //     ),
+    //     featured: true,
+    //     disabled: false,
+    //     bluetoothRequired: true,
+    //     internetConnectionRequired: true,
+    //     launchPeripheralConnectionFlow: true,
+    //     useAutoScan: false,
+    //     connectionIconURL: microbitConnectionIconURL,
+    //     connectionSmallIconURL: microbitConnectionSmallIconURL,
+    //     connectingMessage: (
+    //         <FormattedMessage
+    //             defaultMessage="Connecting"
+    //             description="Message to help people connect to their micro:bit."
+    //             id="gui.extension.microbit.connectingMessage"
+    //         />
+    //     ),
+    //     helpLink: 'https://scratch.mit.edu/microbit'
+    // },
     {
         name: 'LEGO MINDSTORMS EV3',
         extensionId: 'ev3',
@@ -1147,17 +1219,6 @@ const menuItems = [
         credits: 'Listed in the site',
         tags: ['library'],
         featured: true
-    },{
-        // not really an extension, but it's easiest to present it as one
-        name: 'ExtForge',
-        href: 'https://jwklong.github.io/extforge',
-        extensionId: 'special_extforge',
-        iconURL: ExtForgeIcon,
-        description: 'Create extensions with a block-based UI.',
-        extDeveloper: 'jwklong',
-        isNew: true,
-        tags: ['extcreate'],
-        featured: true
     },
     {
         // not really an extension, but it's easiest to present it as one
@@ -1286,16 +1347,16 @@ if (IsLocal || IsLiveTests) {
             ),
             featured: true
         },
-        {
-            name: 'OLD Canvas',
-            extensionId: 'canvas',
-            iconURL: canvasExtensionBanner,
-            tags: ['penguinmod'],
-            insetIconURL: canvasExtensionIcon,
-            customInsetColor: '#0094FF',
-            description: 'depracated version of HTML Canvas.',
-            featured: true
-        },
+        // {
+        //     name: 'OLD Canvas',
+        //     extensionId: 'canvas',
+        //     iconURL: canvasExtensionBanner,
+        //     tags: ['penguinmod'],
+        //     insetIconURL: canvasExtensionIcon,
+        //     customInsetColor: '#0094FF',
+        //     description: 'depracated version of HTML Canvas.',
+        //     featured: false
+        // },
         {
             name: 'Legacy Files',
             extensionId: 'jgFiles',

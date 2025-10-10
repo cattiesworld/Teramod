@@ -10,6 +10,8 @@
     bottom: 0;
     z-index: $z-index-modal;
     background-color: $ui-modal-overlay;
+    background-color: #30303050;
+    backdrop-filter: blur(3px)
 }
 .scrollable {
     overflow: auto;

@@ -171,6 +171,11 @@ export default defineMessages({
         description: 'Tag for filtering a library by categoryexpansion',
         id: 'gui.libraryTags.categoryexpansion'
     },
+    networking: {
+        defaultMessage: 'Networking',
+        description: 'Tag for filtering a library by networking',
+        id: 'gui.libraryTags.networking'
+    },
     ui: {
         defaultMessage: 'Menu',
         description: 'Tag for filtering a library by UI/Menu',

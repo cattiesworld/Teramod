@@ -19,7 +19,6 @@
     cursor: text;
     transition: 0.25s ease-out; /* @todo: standardize with var */
     box-shadow: none;
-
     /*
         For truncating overflowing text gracefully
         Min-width is for a bug: https://css-tricks.com/flexbox-truncated-text
