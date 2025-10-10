@@ -9,7 +9,7 @@ import {defaultStageSize} from '../reducers/custom-stage-size';
 
 const messages = defineMessages({
     newFramerate: {
-        defaultMessage: 'New framerate:',
+        defaultMessage: 'Set framerate to',
         description: 'Prompt shown to choose a new framerate',
         id: 'tw.menuBar.newFramerate'
     }

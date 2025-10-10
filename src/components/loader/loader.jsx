@@ -23,14 +23,14 @@ import isScratchDesktop from '../../lib/isScratchDesktop';
 const mainMessages = {
     'gui.loader.headline': (
         <FormattedMessage
-            defaultMessage="Loading Project"
+            defaultMessage="Project Loading"
             description="Main loading message"
             id="gui.loader.headline"
         />
     ),
     'gui.loader.creating': (
         <FormattedMessage
-            defaultMessage="Creating Project"
+            defaultMessage="Creating New Project"
             description="Main creating message"
             id="gui.loader.creating"
         />
@@ -44,9 +44,19 @@ const mainMessages = {
     )
 };
 
+const welcomes = [
+    "TeraMod is a fork of Penguinmod, which is a fork of TurboWarp, which is a fork of Scratch!"
+]
+
+function random(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
+const newmsg = welcomes[Math.round(random(0, welcomes.length))]
+
 const messages = defineMessages({
     generic: {
-        defaultMessage: 'Loading project …',
+        defaultMessage: ".",
         description: 'Initial generic loading message',
         id: 'tw.loader.generic'
     },

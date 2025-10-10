@@ -23,7 +23,7 @@ const manuallyTrustExtension = url => {
  */
 const isTrustedExtensionOrigin = url => (
     /* Always trust the official extension repostiories */
-    url.startsWith('') ||
+    true ||
     url.startsWith('https://extensions.turbowarp.org/') ||
     url.startsWith('https://extensions.penguinmod.com/') ||
     url.startsWith('https://penguinmod-extensions-gallery.vercel.app/') ||
