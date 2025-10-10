@@ -7,10 +7,14 @@
     border-radius: 4px;
     transition: .2s;
     background-color: white;
+    filter: opacity(.75);
     transition-property: background-color;
     background-size: 100%;
     border: 1px solid rgb(92, 92, 92);
     outline: none;
+    cursor: pointer;
+    transform: scale(1);
+    transition: .1s;
 }
 .checkbox:hover, .checkbox:focus, .checkbox:active, .checkbox:checked {
     border-color: $motion-primary;
@@ -18,9 +22,15 @@
 .checkbox:focus, .checkbox:active {
     box-shadow: 0 0 0 3px $motion-transparent;
 }
+.checkbox:active {
+    transform: scale(.85)
+
+}
 .checkbox:checked {
     background-color: $motion-primary;
     background-image: url("./checkbox.svg");
+    filter: opacity(1);
+    transform: scale(1)
 }
 [theme="dark"] .checkbox {
     border-color: transparent;

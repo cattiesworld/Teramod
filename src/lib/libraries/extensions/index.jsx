@@ -85,7 +85,7 @@ import jwScopeExtensionThumb from './penguinmod/extensions/jwScope.svg';
 
 import iygPerlinNoiseExtensionIcon from './penguinmod/extensions/perlinnoisebanner.png';
 
-// thank yo godslayerakp for makin pmCamera :good:
+// thank yo godslayerakp for makin pmCamera :good: (THIS SUCKS ASS!!!!!!!!)
 import pmCameraExtensionIcon from './penguinmod/extensions/pmcamera_thumbnail.png';
 
 // cl waw
@@ -168,6 +168,10 @@ import pmEventsExpansionExtensionIcon from './penguinmod/extensions/events_expan
 import pmControlsExpansionExtensionIcon from './penguinmod/extensions/controls_expanded.png';
 import pmSensingExpansionExtensionIcon from './penguinmod/extensions/sensing_expanded.png';
 import pmOperatorsExpansionExtensionIcon from './penguinmod/extensions/operators_expanded.png';
+
+// extensions by greedy allay
+
+
 
 /*
     Deprecated Thumbnails, uncomment if useful again
