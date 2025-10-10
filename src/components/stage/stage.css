@@ -27,10 +27,12 @@
 
     /* anything in the stage such as monitor scrollbars should always use light theme */
     color-scheme: light;
+    transition: .3s ease-out;
 }
 
 .stage.full-screen {
     /* tw: remove fullscreen border */
+    /* transition: 0s; */
 }
 
 .with-color-picker {
@@ -51,6 +53,7 @@
 
 .stage-wrapper {
     position: relative;
+    transition: .3s ease-out;
 }
 
 /* we want stage overlays to all be positioned in the same spot as the stage, but can't put them inside the border
@@ -68,6 +71,7 @@ stage doesn't "spill" out from under its rounded corners. instead, shift these o
 .stage-overlays.full-screen {
     top: $stage-full-screen-border-width;
     left: $stage-full-screen-border-width;
+    transition: .5s;
 }
 
 .monitor-wrapper,
@@ -77,6 +81,7 @@ stage doesn't "spill" out from under its rounded corners. instead, shift these o
     top: 0;
     left: 0;
     pointer-events: none;
+    transition: 0;
 }
 .custom-overlays {
     position: absolute;
@@ -89,7 +94,7 @@ stage doesn't "spill" out from under its rounded corners. instead, shift these o
     top: 0;
     left: 0;
     z-index: $z-index-dragging-sprite;
-    filter: drop-shadow(5px 5px 5px $ui-black-transparent-default);
+    filter: drop-shadow(5px 5px 5px $ui-black-transparent-default) opacity(.75);
 }
 
 .stage-bottom-wrapper {
@@ -113,12 +118,14 @@ stage doesn't "spill" out from under its rounded corners. instead, shift these o
 .question-wrapper {
     z-index: $z-index-stage-question;
     pointer-events: auto;
+    background-color: #00000050;
 }
 
 .frame {
     background: $motion-transparent;
     border: 2px solid $motion-primary;
     border-radius: 0.5rem;
+    outline: 4px solid $motion-transparent;
     animation-name: flash;
     animation-duration: 0.75s;
     animation-fill-mode: forwards; /* Leave at 0 opacity after animation */
@@ -153,8 +160,6 @@ stage doesn't "spill" out from under its rounded corners. instead, shift these o
     width: 100%;
     object-fit: contain;
 }
-
-
 
 @keyframes flash {
     0% { opacity: 1; }

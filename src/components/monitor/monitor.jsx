@@ -14,12 +14,12 @@ import ListMonitor from '../../containers/list-monitor.jsx';
 import styles from './monitor.css';
 
 const categories = {
-    data: '#FF8C1A',
+    data: '#2c2c2cff',
     sensing: '#5CB1D6',
     sound: '#CF63CF',
     looks: '#9966FF',
     motion: '#4C97FF',
-    list: '#FC662C',
+    list: '#fc2c2cff',
     control: '#FFAB19',
     extension: '#0FBD8C'
 };
@@ -66,6 +66,14 @@ const MonitorComponent = props => (
             // the context menus `position: fixed`. For more details, see
             // http://meyerweb.com/eric/thoughts/2011/09/12/un-fixing-fixed-elements-with-css-transforms/
             <ContextMenu id={`monitor-${props.id}`}>
+                {props.draggable && props.onHide &&
+                    <BorderedMenuItem onClick={props.onCopy}>
+                        <FormattedMessage
+                            defaultMessage="copy"
+                            description="Menu item to hide the monitor"
+                            id="gui.monitor.contextMenu.copy"
+                        />
+                    </BorderedMenuItem>}
                 {props.draggable && props.onSetModeToDefault &&
                     <MenuItem onClick={props.onSetModeToDefault}>
                         <FormattedMessage

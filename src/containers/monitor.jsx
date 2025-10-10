@@ -42,6 +42,7 @@ class Monitor extends React.Component {
         bindAll(this, [
             'handleDragEnd',
             'handleHide',
+            'handleCopy',
             'handleNextMode',
             'handleSetModeToDefault',
             'handleSetModeToLarge',
@@ -122,6 +123,10 @@ class Monitor extends React.Component {
             id: this.props.id,
             visible: false
         }));
+    }
+    handleCopy () {
+        console.log(this.props.value)
+        navigator.clipboard.writeText(this.props.value);
     }
     handleNextMode () {
         const modes = availableModes(this.props.opcode);
@@ -227,6 +232,7 @@ class Monitor extends React.Component {
                     onExport={isList || isImage ? this.handleExport : null}
                     onImport={isList || isImage ? this.handleImport : null}
                     onHide={this.handleHide}
+                    onCopy={this.handleCopy}
                     onNextMode={this.handleNextMode}
                     onSetModeToDefault={isList || isImage ? null : this.handleSetModeToDefault}
                     onSetModeToLarge={isList || isImage ? null : this.handleSetModeToLarge}

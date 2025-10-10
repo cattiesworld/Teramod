@@ -44,27 +44,27 @@
 }
 
 .top-block {
-    animation: top-slide-in 1s cubic-bezier(0.4, 0, 0.2, 1) infinite
+    animation: top-slide-in 1.25s cubic-bezier(0.4, 0, 0.2, 1) infinite
 }
 
 .middle-block {
-    animation: middle-slide-in 1s cubic-bezier(0.4, 0, 0.2, 1) infinite
+    animation: middle-slide-in 1.25s cubic-bezier(0.4, 0, 0.2, 1) infinite
 }
 
 .bottom-block {
-    animation: bottom-slide-in 1s cubic-bezier(0.4, 0, 0.2, 1) infinite
+    animation: bottom-slide-in 1.25s cubic-bezier(0.4, 0, 0.2, 1) infinite
 }
 
 [dir="rtl"] .top-block {
-    animation: top-slide-in-rtl 1s cubic-bezier(0.4, 0, 0.2, 1) infinite
+    animation: top-slide-in-rtl 1.25s cubic-bezier(0.4, 0, 0.2, 1) infinite
 }
 
 [dir="rtl"] .middle-block {
-    animation: middle-slide-in-rtl 1s cubic-bezier(0.4, 0, 0.2, 1) infinite
+    animation: middle-slide-in-rtl 1.25s cubic-bezier(0.4, 0, 0.2, 1) infinite
 }
 
 [dir="rtl"] .bottom-block {
-    animation: bottom-slide-in-rtl 1s cubic-bezier(0.4, 0, 0.2, 1) infinite
+    animation: bottom-slide-in-rtl 1.25s cubic-bezier(0.4, 0, 0.2, 1) infinite
 }
 
 @keyframes top-slide-in {

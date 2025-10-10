@@ -4,7 +4,8 @@
 
 .monitor-container {
     position: absolute;
-    background: $ui-primary-light; /* tw: do not look different in dark mode */
+    /* background: $ui-primary;  */
+    background: #00000060; /* tw: does not look different in dark mode */
     z-index: $z-index-monitor;
     border: 1px solid $ui-black-transparent-default;
     border-radius: calc($space / 2);
@@ -13,7 +14,10 @@
     transition: box-shadow 0.2s;
     pointer-events: all;
     overflow: hidden;
-    color: #575e75; /* tw: explicitly set color to match Scratch */
+    /* color: #575e75; */
+    color: white;
+    /* filter: opacity(.80); */
+    backdrop-filter: blur(5px);
 }
 
 .monitor:hover {
@@ -105,6 +109,7 @@
     padding: 2px;
     flex-shrink: 0;
     transform: translateZ(0); /* Keep sharp when scaled */
+    height: fit-content;
 }
 
 .list-index {
@@ -147,7 +152,7 @@
     overflow: hidden;
     display: flex;
     align-items: center;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(82, 82, 82, 0.361);
 }
 
 .value-inner {
@@ -156,7 +161,8 @@
     overflow: hidden; /* Don't let long values escape container */
     text-overflow: ellipsis;
     user-select: text; /* Allow selecting list values for 2.0 compatibility, only relevant in player */
-    white-space: pre;
+    white-space: wrap;
+    height: fit-content;
 }
 
 .list-input {
