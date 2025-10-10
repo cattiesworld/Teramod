@@ -13,7 +13,7 @@ const DelayedMountPropertyHOC = function (WrappedComponent, duration, delayedPro
                 this.setState({
                     done: true
                 });
-            }, duration);
+            }, 0);
         }
         componentWillUnmount () {
             clearTimeout(this.timeout);

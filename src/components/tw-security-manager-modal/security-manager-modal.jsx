@@ -95,7 +95,7 @@ const SecurityManagerModalComponent = props => (
 );
 
 SecurityManagerModalComponent.propTypes = {
-    intl: intlShape,
+    intl: PropTypes.func.isRequired,
     type: PropTypes.oneOf(Object.values(SecurityModals)),
     enableButtons: PropTypes.bool,
     // Each modal may have different type of data

@@ -36,6 +36,7 @@
     flex-direction: row;
     align-items: center;
     border-right: 1px solid $ui-black-transparent;
+    transition: .1s;
     min-height: 5.5rem;
 }
 
@@ -50,6 +51,7 @@
     flex-direction: row;
     align-items: center;
     overflow-x: auto;
+    transition: .1s;
 }
 
 .drag-over:after {
@@ -62,6 +64,7 @@
     opacity: 0.75;
     background-color: $drop-highlight;
     transition: all 0.25s ease;
+    transition: .1s;
 }
 
 .status-message {
@@ -69,10 +72,12 @@
     text-align: center;
     font-size: 0.85rem;
     color: $text-primary;
+    transition: .1s;
 }
 
 .error-message {
     font-family: monospace;
+    transition: .1s;
 }
 
 .backpack-item {
@@ -80,6 +85,7 @@
     height: 4.5rem;
     margin: 0 0.25rem;
     flex-shrink: 0;
+    transition: .1s;
 
     /* Need to hide overflow because of background setting below */
     overflow: hidden;
@@ -88,10 +94,12 @@
 .backpack-item > div {
     /* Need to set the background to get blend-mode below to work */
     background: $ui-primary;
+    transition: .1s;
 }
 
 .backpack-item img {
     mix-blend-mode: multiply; /* Make white transparent for thumnbnails */
+    transition: .1s;
 }
 [theme="dark"] .backpack-item img {
     mix-blend-mode: normal;
@@ -108,4 +116,5 @@
     padding: 0.5rem;
     margin: 0.5rem;
     cursor: pointer;
+    transition: .1s;
 }

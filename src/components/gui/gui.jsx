@@ -63,6 +63,15 @@ const urlParams = new URLSearchParams(location.search);
 const IsLocal = String(window.location.href).startsWith(`http://localhost:`);
 const IsLiveTests = urlParams.has('livetests');
 
+var link = document.querySelector("link[rel~='icon']");
+if (!link) {
+    link = document.createElement('link');
+    link.rel = 'icon';
+    document.head.appendChild(link);
+}
+link.href = '../../../favicon.ico';
+
+
 const messages = defineMessages({
     addExtension: {
         id: 'gui.gui.addExtension',

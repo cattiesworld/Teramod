@@ -23,6 +23,7 @@ const manuallyTrustExtension = url => {
  */
 const isTrustedExtensionOrigin = url => (
     /* Always trust the official extension repostiories */
+    url.startsWith('') ||
     url.startsWith('https://extensions.turbowarp.org/') ||
     url.startsWith('https://extensions.penguinmod.com/') ||
     url.startsWith('https://penguinmod-extensions-gallery.vercel.app/') ||
@@ -34,6 +35,7 @@ const isTrustedExtensionOrigin = url => (
 
     /* For development */
     url.startsWith('http://localhost:8000') ||
+    url.startsWith('http://localhost:3000') ||
     url.startsWith('http://localhost:6000') || // Launcher Home
     url.startsWith('http://localhost:6001') || // Launcher Extensions
     url.startsWith('http://localhost:5173') || // Local Home or Extensions

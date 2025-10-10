@@ -181,14 +181,14 @@ module.exports = [
                 chunks: ['player'],
                 template: 'src/playground/index.ejs',
                 filename: 'index.html',
-                title: 'TeraMod | A mod of TurboWarp',
+                title: 'TeraMod | Create awesome projects',
                 ...htmlWebpackPluginCommon
             }),
             new HtmlWebpackPlugin({
                 chunks: ['fullscreen'],
                 template: 'src/playground/index.ejs',
                 filename: 'fullscreen.html',
-                title: 'TeraMod | A mod of TurboWarp',
+                title: 'TeraMod | Create awesome projects',
                 ...htmlWebpackPluginCommon
             }),
             new HtmlWebpackPlugin({
