@@ -550,14 +550,14 @@ class MenuBar extends React.Component {
                                     <MenuSection>
                                         <MenuItemLink href="https://discord.gg/mVHKXvUgsn">
                                             <FormattedMessage
-                                                defaultMessage="Some scripts could not be compiled."
+                                                defaultMessage="Script compilation error!"
                                                 description="Link in error menu"
                                                 id="tw.menuBar.reportError1"
                                             />
                                         </MenuItemLink>
                                         <MenuItemLink href="https://discord.gg/mVHKXvUgsn">
                                             <FormattedMessage
-                                                defaultMessage="This is a bug. Please report it."
+                                                defaultMessage="Bug encountered! Report it in the discord."
                                                 description="Link in error menu"
                                                 id="tw.menuBar.reportError2"
                                             />
@@ -768,13 +768,13 @@ class MenuBar extends React.Component {
                                         <MenuItem onClick={toggleTurboMode}>
                                             {turboMode ? (
                                                 <FormattedMessage
-                                                    defaultMessage="Turn off Turbo Mode"
+                                                    defaultMessage="disable Turbo Mode"
                                                     description="Menu bar item for turning off turbo mode"
                                                     id="gui.menuBar.turboModeOff"
                                                 />
                                             ) : (
                                                 <FormattedMessage
-                                                    defaultMessage="Turn on Turbo Mode"
+                                                    defaultMessage="enable Turbo Mode"
                                                     description="Menu bar item for turning on turbo mode"
                                                     id="gui.menuBar.turboModeOn"
                                                 />
@@ -785,13 +785,13 @@ class MenuBar extends React.Component {
                                         <MenuItem onClick={changeFramerate}>
                                             {framerate === 60 ? (
                                                 <FormattedMessage
-                                                    defaultMessage="Turn off 60 FPS Mode"
+                                                    defaultMessage="Enable 60 FPS Mode"
                                                     description="Menu bar item for turning off 60 FPS mode"
                                                     id="tw.menuBar.60off"
                                                 />
                                             ) : (
                                                 <FormattedMessage
-                                                    defaultMessage="Turn on 60 FPS Mode"
+                                                    defaultMessage="Disable 60 FPS Mode"
                                                     description="Menu bar item for turning on 60 FPS mode"
                                                     id="tw.menuBar.60on"
                                                 />

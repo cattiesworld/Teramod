@@ -342,9 +342,9 @@ const menuItems = [
     // },
     {
         name: 'Project Interfaces',
-        extensionId: 'https://lordcat.dev/assets/thumbnails/ProjectInterfacesExtension.png',
+        extensionId: '../../../../../',
         iconURL: 'https://lordcat.dev/assets/thumbnails/ProjectInterfacesExtension.png',
-        description: 'Easily display interfaces on your projects!',
+        description: 'Easily create more interactive projects!',
         tags: ['teramod'],
         extDeveloper: 'Lord Cat',
         featured: true
