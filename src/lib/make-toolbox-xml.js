@@ -23,6 +23,8 @@ const motion = function (isInitialSetup, isStage, targetId) {
         ${isStage ? `
         <label text="${stageSelected}"></label>
         ` : `
+        <block type="motion_test">
+        </block>
         <block type="motion_movesteps">
             <value name="STEPS">
                 <shadow type="math_number">
@@ -608,9 +610,27 @@ const events = function (isInitialSetup, isStage) {
     `;
 };
 
+
+
+
 const control = function (isInitialSetup, isStage) {
     return `
     <category name="%{BKY_CATEGORY_CONTROL}" id="control" colour="#FFAB19" secondaryColour="#CF8B17">
+
+        <block type="control_if">
+            <mutation branches="1" ends-in-else="false"></mutation>
+            <value name="BOOL1">
+                <shadow type="checkbox"></shadow>
+            </value>
+        </block>
+        <block type="control_if_else">
+            <mutation branches="2" ends-in-else="true"></mutation>
+            <value name="BOOL1">
+                <shadow type="checkbox"></shadow>
+            </value>
+        </block>
+        ${blockSeparator}
+
         <block type="control_wait">
             <value name="DURATION">
                 <shadow type="math_positive_number">
@@ -618,17 +638,6 @@ const control = function (isInitialSetup, isStage) {
                 </shadow>
             </value>
         </block>
-        <block type="control_waitsecondsoruntil">
-            <value name="DURATION">
-                <shadow type="math_positive_number">
-                    <field name="NUM">1</field>
-                </shadow>
-            </value>
-            <value name="CONDITION">
-                <shadow type="checkbox" />
-            </value>
-        </block>
-        ${blockSeparator}
         <block type="control_repeat">
             <value name="TIMES">
                 <shadow type="math_whole_number">
@@ -637,103 +646,10 @@ const control = function (isInitialSetup, isStage) {
             </value>
         </block>
         <block id="forever" type="control_forever"/>
-        <block id="for_each" type="control_for_each">
-            <value name="VALUE">
-                <shadow type="math_whole_number">
-                    <field name="NUM">10</field>
-                </shadow>
-            </value>
-        </block>
-        <block type="control_exitLoop"/>
-        <block type="control_continueLoop"/>
+
+
         ${blockSeparator}
-        <block type="control_switch"/>
-        <block type="control_switch_default"/>
-        <block type="control_exitCase"/>
-        <block type="control_case_next">
-            <value name="CONDITION">
-                <shadow type="text">
-                    <field name="TEXT">ello</field>
-                </shadow>
-            </value>
-        </block>
-        <block type="control_case">
-            <value name="CONDITION">
-                <shadow type="text">
-                    <field name="TEXT">ello</field>
-                </shadow>
-            </value>
-        </block>
-        ${blockSeparator}
-        <block type="control_expandableIf">
-            <mutation branches="1" ends-in-else="false"></mutation>
-            <value name="BOOL1">
-                <shadow type="checkbox"></shadow>
-            </value>
-        </block>
-        <block type="control_expandableIf">
-            <mutation branches="2" ends-in-else="true"></mutation>
-            <value name="BOOL1">
-                <shadow type="checkbox"></shadow>
-            </value>
-        </block>
-        <block type="control_if_return_else_return">
-            <value name="boolean">
-                <shadow type="checkbox" />
-            </value>
-            <value name="TEXT1">
-                <shadow type="text">
-                    <field name="TEXT">foo</field>
-                </shadow>
-            </value>
-            <value name="TEXT2">
-                <shadow type="text">
-                    <field name="TEXT">bar</field>
-                </shadow>
-            </value>
-        </block>
-        ${blockSeparator}
-        <block id="wait_until" type="control_wait_until">
-            <value name="CONDITION">
-                <shadow type="checkbox" />
-            </value>
-        </block>
-        <block id="repeat_until" type="control_repeat_until">
-            <value name="CONDITION">
-                <shadow type="checkbox" />
-            </value>
-        </block>
-        <block id="while" type="control_while">
-            <value name="CONDITION">
-                <shadow type="checkbox" />
-            </value>
-        </block>
-        ${blockSeparator}
-        <block type="control_all_at_once"/>
-        <block type="control_run_as_sprite">
-            <value name="RUN_AS_OPTION">
-                <shadow type="control_run_as_sprite_menu"/>
-            </value>
-        </block>
-        ${blockSeparator}
-        <block type="control_try_catch"/>
-        <block type="control_throw_error">
-            <value name="ERROR">
-                <shadow type="text">
-                    <field name="TEXT">Hello!</field>
-                </shadow>
-            </value>
-        </block>
-        <block type="control_error"/>
-        ${blockSeparator}
-        <block type="control_backToGreenFlag"></block>
-        <block type="control_stop_sprite">
-            <value name="STOP_OPTION">
-                <shadow type="control_stop_sprite_menu"/>
-            </value>
-        </block>
-        <block type="control_stop"/>
-        ${blockSeparator}
+
         ${isStage ? `
             <block type="control_create_clone_of">
                 <value name="CLONE_OPTION">
@@ -760,6 +676,105 @@ const control = function (isInitialSetup, isStage) {
             <block type="control_delete_this_clone"/>
             <block type="control_is_clone"/>
         `}
+ ${blockSeparator}
+
+        <block id="wait_until" type="control_wait_until">
+            <value name="CONDITION">
+                <shadow type="checkbox" />
+            </value>
+        </block>
+        <block id="repeat_until" type="control_repeat_until">
+            <value name="CONDITION">
+                <shadow type="checkbox" />
+            </value>
+        </block>
+        <block id="while" type="control_while">
+            <value name="CONDITION">
+                <shadow type="checkbox" />
+            </value>
+        </block>
+        ${blockSeparator}
+
+        ${blockSeparator}
+        <block type="control_all_at_once"/>
+        <block type="control_run_as_sprite">
+            <value name="RUN_AS_OPTION">
+                <shadow type="control_run_as_sprite_menu"/>
+            </value>
+        </block>
+        ${blockSeparator}
+
+                <block type="control_if_return_else_return">
+            <value name="boolean">
+                <shadow type="checkbox" />
+            </value>
+            <value name="TEXT1">
+                <shadow type="text">
+                    <field name="TEXT">foo</field>
+                </shadow>
+            </value>
+            <value name="TEXT2">
+                <shadow type="text">
+                    <field name="TEXT">bar</field>
+                </shadow>
+            </value>
+        </block>
+
+         ${blockSeparator}
+        
+
+        <block type="control_waitsecondsoruntil">
+            <value name="DURATION">
+                <shadow type="math_positive_number">
+                    <field name="NUM">1</field>
+                </shadow>
+            </value>
+            <value name="CONDITION">
+                <shadow type="checkbox" />
+            </value>
+        </block>
+
+        <block id="for_each" type="control_for_each">
+            <value name="VALUE">
+                <shadow type="math_whole_number">
+                    <field name="NUM">10</field>
+                </shadow>
+            </value>
+        </block>
+
+        <block type="control_exitLoop"/>
+        <block type="control_continueLoop"/>
+
+
+        <block type="control_switch"/>
+        <block type="control_switch_default"/>
+        <block type="control_exitCase"/>
+        <block type="control_case_next">
+            <value name="CONDITION">
+                <shadow type="text">
+                    <field name="TEXT">case</field>
+                </shadow>
+            </value>
+        </block>
+        <block type="control_case">
+            <value name="CONDITION">
+                <shadow type="text">
+                    <field name="TEXT">case</field>
+                </shadow>
+            </value>
+        </block>
+
+  ${blockSeparator}
+
+  ${blockSeparator}
+        <block type="control_backToGreenFlag"></block>
+        <block type="control_stop_sprite">
+            <value name="STOP_OPTION">
+                <shadow type="control_stop_sprite_menu"/>
+            </value>
+        </block>
+        <block type="control_stop"/>
+        ${blockSeparator}
         ${LazyScratchBlocks.isNameUrMom() ? '<block type="your_mom"/>' : ''}
         ${categorySeparator}
     </category>
@@ -816,50 +831,6 @@ const sensing = function (isInitialSetup, isStage, targetId) {
             <block type="sensing_distanceto">
                 <value name="DISTANCETOMENU">
                     <shadow type="sensing_distancetomenu"/>
-                </value>
-            </block>
-            <block type="sensing_distanceTo">
-                <value name="x1">
-                    <shadow type="text">
-                        <field name="TEXT">10</field>
-                    </shadow>
-                </value>
-                <value name="y1">
-                    <shadow type="text">
-                        <field name="TEXT">-10</field>
-                    </shadow>
-                </value>
-                <value name="x2">
-                    <shadow type="text">
-                        <field name="TEXT">-10</field>
-                    </shadow>
-                </value>
-                <value name="y2">
-                    <shadow type="text">
-                        <field name="TEXT">10</field>
-                    </shadow>
-                </value>
-            </block>
-            <block type="sensing_directionTo">
-                <value name="x1">
-                    <shadow type="text">
-                        <field name="TEXT">10</field>
-                    </shadow>
-                </value>
-                <value name="y1">
-                    <shadow type="text">
-                        <field name="TEXT">-10</field>
-                    </shadow>
-                </value>
-                <value name="x2">
-                    <shadow type="text">
-                        <field name="TEXT">-10</field>
-                    </shadow>
-                </value>
-                <value name="y2">
-                    <shadow type="text">
-                        <field name="TEXT">10</field>
-                    </shadow>
                 </value>
             </block>
             ${blockSeparator}
@@ -1046,15 +1017,6 @@ const operators = function (isInitialSetup) {
                 </shadow>
             </value>
         </block>
-        <block type="operator_expandableMath">
-            <mutation inputcount="2" menuvalues="+"></mutation>
-            <value name="NUM1">
-                <shadow type="math_number"><field name="NUM">0</field></shadow>
-            </value>
-            <value name="NUM2">
-                <shadow type="math_number"><field name="NUM">0</field></shadow>
-            </value>
-        </block>
         <block type="operator_advMathExpanded">
             <value name="ONE">
                 <shadow type="math_number">
@@ -1074,6 +1036,51 @@ const operators = function (isInitialSetup) {
             </value>
         </block>
         ${blockSeparator}
+                    <block type="sensing_distanceTo">
+                <value name="x1">
+                    <shadow type="text">
+                        <field name="TEXT">10</field>
+                    </shadow>
+                </value>
+                <value name="y1">
+                    <shadow type="text">
+                        <field name="TEXT">-10</field>
+                    </shadow>
+                </value>
+                <value name="x2">
+                    <shadow type="text">
+                        <field name="TEXT">-10</field>
+                    </shadow>
+                </value>
+                <value name="y2">
+                    <shadow type="text">
+                        <field name="TEXT">10</field>
+                    </shadow>
+                </value>
+            </block>
+            <block type="sensing_directionTo">
+                <value name="x1">
+                    <shadow type="text">
+                        <field name="TEXT">10</field>
+                    </shadow>
+                </value>
+                <value name="y1">
+                    <shadow type="text">
+                        <field name="TEXT">-10</field>
+                    </shadow>
+                </value>
+                <value name="x2">
+                    <shadow type="text">
+                        <field name="TEXT">-10</field>
+                    </shadow>
+                </value>
+                <value name="y2">
+                    <shadow type="text">
+                        <field name="TEXT">10</field>
+                    </shadow>
+                </value>
+            </block>
+            ${blockSeparator}
         <block type="operator_random">
             <value name="FROM">
                 <shadow type="math_number">
@@ -1235,19 +1242,6 @@ const operators = function (isInitialSetup) {
                     </shadow>
                 </value>
             </block>
-            <block type="operator_expandablejoininputs">
-                <mutation inputcount="2"></mutation>
-                <value name="INPUT1">
-                    <shadow type="text">
-                        <field name="TEXT">apple</field>
-                    </shadow>
-                </value>
-                <value name="INPUT2">
-                    <shadow type="text">
-                        <field name="TEXT">banana</field>
-                    </shadow>
-                </value>
-            </block>
             ${blockSeparator}
             <block type="operator_indexOfTextInText">
                 <value name="TEXT1">
@@ -1339,46 +1333,46 @@ const operators = function (isInitialSetup) {
             <block type="operator_replaceAll">
                 <value name="text">
                     <shadow type="text">
-                        <field name="TEXT">foo bar</field>
+                        <field name="TEXT">cat dog</field>
                     </shadow>
                 </value>
                 <value name="term">
                     <shadow type="text">
-                        <field name="TEXT">foo</field>
+                        <field name="TEXT">cat</field>
                     </shadow>
                 </value>
                 <value name="res">
                     <shadow type="text">
-                        <field name="TEXT">bar</field>
+                        <field name="TEXT">dog</field>
                     </shadow>
                 </value>
             </block>
             <block type="operator_replaceFirst">
                 <value name="text">
                     <shadow type="text">
-                        <field name="TEXT">bar bar doo</field>
+                        <field name="TEXT">cat cat dog</field>
                     </shadow>
                 </value>
                 <value name="term">
                     <shadow type="text">
-                        <field name="TEXT">bar</field>
+                        <field name="TEXT">dog</field>
                     </shadow>
                 </value>
                 <value name="res">
                     <shadow type="text">
-                        <field name="TEXT">foo</field>
+                        <field name="TEXT">cat</field>
                     </shadow>
                 </value>
             </block>
             <block type="operator_regexmatch">
                 <value name="text">
                     <shadow type="text">
-                        <field name="TEXT">foo bar</field>
+                        <field name="TEXT">cat dog</field>
                     </shadow>
                 </value>
                 <value name="reg">
                     <shadow type="text">
-                        <field name="TEXT">foo</field>
+                        <field name="TEXT">cat</field>
                     </shadow>
                 </value>
                 <value name="regrule">
@@ -1391,7 +1385,7 @@ const operators = function (isInitialSetup) {
             <block type="operator_toUpperLowerCase">
                 <value name="TEXT">
                     <shadow type="text">
-                        <field name="TEXT">ello</field>
+                        <field name="TEXT">shout</field>
                     </shadow>
                 </value>
             </block>

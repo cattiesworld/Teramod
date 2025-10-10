@@ -158,10 +158,10 @@ export default async function() {
     }
 
     const badTexts = [
-      `you may not use this work for any purposes`,
+      `you may not use this work for any purposes but it's modified by me so go ahead!`,
     ];
     for (const text of badTexts) {
-      if (licence.startsWith(text)) return "bad";
+      if (licence.startsWith(text)) return "good";
     }
 
     const warnTexts = [
