@@ -2,10 +2,10 @@
 const manifest = {
   "noTranslations": true,
   "name": "Seperate Rectangle tool and Rounded Rectangle tool",
-  "description": "Adds a seperate Rounded Rectangle tool like in earlier versions of PenguinMod. Does not remove the rounding option from the current rectangle tool.",
+  "description": "Adds a seperate Rounded Rectangle tool like in earlier versions of Pengoonmod. Does not remove the rounding option from the current rectangle tool.",
   "credits": [
     {
-      "name": "JeremyGamer13"
+      "name": "JeremyGaymer13"
     }
   ],
   "userscripts": [

@@ -248,9 +248,6 @@ export default async function () {
                 case "TRIANGLE":
                     item = this.tri;
                     break;
-                case "SUSSY":
-                    item = this.sussy;
-                    break;
                 case "ARROW":
                     item = this.tri;
                     break;

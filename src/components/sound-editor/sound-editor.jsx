@@ -410,8 +410,8 @@ const SoundEditor = props => (
         {props.size >= SOUND_BYTE_LIMIT && (
             <div className={classNames(styles.alert, styles.tooLarge)}>
                 <FormattedMessage
-                    defaultMessage="This sound could be too large to upload to PenguinMod."
-                    description="Message that appears when a sound exceeds the PenguinMod sound size limit."
+                    defaultMessage="This sound could be too large to upload to TeraMod."
+                    description="Message that appears when a sound exceeds the TeraMod sound size limit."
                     id="pm.tooLarge"
                 />
             </div>

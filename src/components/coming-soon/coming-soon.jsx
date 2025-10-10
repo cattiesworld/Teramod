@@ -4,7 +4,7 @@ import {defineMessages, injectIntl, intlShape, FormattedMessage} from 'react-int
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
-
+// WHY IS THIS ALL STILL HERE?!
 import styles from './coming-soon.css';
 
 import awwCatIcon from './aww-cat.png';
