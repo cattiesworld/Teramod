@@ -203,7 +203,7 @@ const Credits = () => (
         <section>
             <h2>Addons</h2>
             <p>
-                Here are the developers that made the addons from <a href="https://scratchaddons.com/">Scratch Addons</a> available.
+                Here are the developers that made the addons from <a href="https://scratchaddons.com/">Scratch Addonss</a> available.
             </p>
             <UserList users={UserData.addonDevelopers} />
             <p><i>The list order is randomized on each refresh.</i></p>

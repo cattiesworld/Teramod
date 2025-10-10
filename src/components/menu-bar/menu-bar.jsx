@@ -853,7 +853,20 @@ class MenuBar extends React.Component {
                                 </MenuSection>
                             </MenuBarMenu>
                         </div>
-                        {this.props.onClickAddonSettings && (
+                        <div
+                            className={classNames(styles.menuBarItem, styles.hoverable)}
+                            onMouseUp={this.props.onClickSettings}
+                        >
+                            <div>
+                                <FormattedMessage
+                                    defaultMessage="Settings"
+                                    description="Text for gameplay settings menu item"
+                                    id="pm.menuBar.gameplaySettings"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    {this.props.onClickAddonSettings && (
                             <div
                                 className={classNames(styles.menuBarItem, styles.hoverable)}
                                 onMouseUp={this.props.onClickAddonSettings}
@@ -868,19 +881,6 @@ class MenuBar extends React.Component {
                                 </div>
                             </div>
                         )}
-                        <div
-                            className={classNames(styles.menuBarItem, styles.hoverable)}
-                            onMouseUp={this.props.onClickSettings}
-                        >
-                            <div>
-                                <FormattedMessage
-                                    defaultMessage="Settings"
-                                    description="Text for gameplay settings menu item"
-                                    id="pm.menuBar.gameplaySettings"
-                                />
-                            </div>
-                        </div>
-                    </div>
                     <Divider className={classNames(styles.divider)} />
                     {/* {(this.props.authorUsername && this.props.authorUsername !== this.props.username) ? (
                         <AuthorInfo
