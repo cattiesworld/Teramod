@@ -46,6 +46,7 @@
 .checkbox:focus,
 .checkbox:hover {
     border: 2px solid $motion-primary;
+    transform: scale(1.2)
 }
 [dir="rtl"] .checkbox {
     margin-right: initial;
@@ -59,4 +60,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+.checkbox:active {
+    filter: opacity(.8);
 }
