@@ -14,6 +14,7 @@
     border-width: 1px;
     border-style: solid;
     border-bottom: 0;
+    transition: .2s;
 }
 
 .sprite-wrapper {
@@ -35,10 +36,12 @@
     min-width: 4rem;
     min-height: 4rem; /* @todo: calc height same as width */
     margin: calc($space / 2);
+    transition: .2s;
 }
 
 .sprite {
     height: 100%;
+    transition: .2s;
 }
 
 
@@ -53,6 +56,7 @@
     */
     height: calc(100% - $sprite-info-height);
     overflow-y: auto;
+    transition: .2s;
 }
 
 .scroll-wrapper-dragging {
@@ -70,6 +74,7 @@
     padding-bottom: $space;
 
     overflow: hidden;
+    transition: .2s;
 }
 
 .add-button {

@@ -12,7 +12,7 @@ export default async function () {
 
     const paperLinkModes = new Set([
         "TEXT", "OVAL", "RECT",
-        ...(isPM ? ["ROUNDED_RECT", "TRIANGLE", "SUSSY", "ARROW"] : [])
+        ...(isPM ? ["ROUNDED_RECT", "TRIANGLE", "ARROW"] : [])
     ]);
 
     let selectedClassName, unselectedClassName, customBtn;

@@ -1475,7 +1475,12 @@ const myBlocks = function () {
 const liveTests = function () {
     return `
     <category name="Testing" id="liveTests" colour="#c02020ff" secondaryColour="#ca2828ff">
-        <block type="motion_test">
+         <block type="motion_test">
+            <value name="STEPS">
+                <shadow type="math_number">
+                    <field name="NUM">10</field>
+                </shadow>
+            </value>
         </block>
     </category>
     `;

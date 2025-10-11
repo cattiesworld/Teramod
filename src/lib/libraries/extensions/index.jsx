@@ -1165,26 +1165,16 @@ const menuItems = [
         helpLink: 'https://scratch.mit.edu/vernier'
     },
     {
-        name: (
-            <FormattedMessage
-                defaultMessage="PenguinMod Extra Extensions"
-                description="Name of library item to open the Extra Extensions gallery"
-                id="pm.extraLibraryExtensions.name"
-            />
-        ),
-        href: 'https://extensions.penguinmod.com/',
-        extensionId: 'special_penguinmodExtensionLibrary',
-        iconURL: penguinmodLibraryExtensionIcon,
-        description: (
-            <FormattedMessage
-                defaultMessage="See some user-submitted extensions. Opens in a new tab."
-                description="Description of library item to open the Extra Extensions gallery"
-                id="pm.extraLibraryExtensions.description"
-            />
-        ),
-        tags: ['penguinmod', 'library'],
+        name: "Greedy Allay's Extension Collection",
+        href: 'https://greedyallay.github.io/extensions',
+        extensionId: 'special_sharkpoolExtensionLibrary',
+        iconURL: null,
+        description: 'Tons of extensions created by SharkPool.\n\nClick on an extension while this menu is open to add it to your project.',
+        credits: 'Listed in the site',
+        tags: ['library'],
         featured: true
     },
+
     {
         name: (
             <FormattedMessage
@@ -1208,6 +1198,27 @@ const menuItems = [
             />
         ),
         tags: ['tw', 'turbowarp', 'library'],
+        featured: true
+    },
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="PenguinMod Extra Extensions"
+                description="Name of library item to open the Extra Extensions gallery"
+                id="pm.extraLibraryExtensions.name"
+            />
+        ),
+        href: 'https://extensions.penguinmod.com/',
+        extensionId: 'special_penguinmodExtensionLibrary',
+        iconURL: penguinmodLibraryExtensionIcon,
+        description: (
+            <FormattedMessage
+                defaultMessage="See some user-submitted extensions. Opens in a new tab."
+                description="Description of library item to open the Extra Extensions gallery"
+                id="pm.extraLibraryExtensions.description"
+            />
+        ),
+        tags: ['penguinmod', 'library'],
         featured: true
     },
     {
