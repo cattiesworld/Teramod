@@ -708,12 +708,12 @@ const control = function (isInitialSetup, isStage) {
             </value>
             <value name="TEXT1">
                 <shadow type="text">
-                    <field name="TEXT">foo</field>
+                    <field name="TEXT">cat</field>
                 </shadow>
             </value>
             <value name="TEXT2">
                 <shadow type="text">
-                    <field name="TEXT">bar</field>
+                    <field name="TEXT">dog</field>
                 </shadow>
             </value>
         </block>
