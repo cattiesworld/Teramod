@@ -15,9 +15,13 @@
     pointer-events: none;
     transition: opacity 0.2s ease;
     z-index: $z-index-context-menu;
+    backdrop-filter: blur(10px);
+    background-color: #ffffff75
 }
+
 [theme="dark"] .context-menu {
     background-color: $ui-primary;
+    background-color: #00000075;
 }
 
 .menu-item {

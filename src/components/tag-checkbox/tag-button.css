@@ -17,6 +17,7 @@
 
 .active {
     background: $data-primary;
+    transform: scale(.9)
 }
 
 .checkbox-label {
