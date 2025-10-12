@@ -23,7 +23,7 @@ const CrashMessage = props => (
             </p>
             <p>
                 <FormattedMessage
-                    defaultMessage={'We are so sorry, but it looks like the page has crashed.' +
+                    defaultMessage={'We are definitely not sorry, it looks like TeraMod has crashed.' +
                         ' Please refresh your page to try' +
                         ' again.' +
                         ' If the problem persists, please report the downloadable error below to our Discord.'}
