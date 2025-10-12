@@ -45,6 +45,7 @@ class Monitor extends React.Component {
             'handleCopy',
             'handleNextMode',
             'handleSetModeToDefault',
+            'handleSet',
             'handleSetModeToLarge',
             'handleSetModeToSlider',
             'handleSliderPromptClose',
@@ -143,6 +144,11 @@ class Monitor extends React.Component {
             mode: 'default'
         }));
     }
+    handleSet () {
+        const {vm, targetId, id: variableId} = this.props;
+        const variable = getVariable(vm, targetId, variableId);
+        variable.value = prompt(`enter a new value for variable ${variable.name}`)
+    }
     handleSetModeToLarge () {
         this.props.vm.runtime.requestUpdateMonitor(Map({
             id: this.props.id,
@@ -235,6 +241,7 @@ class Monitor extends React.Component {
                     onCopy={this.handleCopy}
                     onNextMode={this.handleNextMode}
                     onSetModeToDefault={isList || isImage ? null : this.handleSetModeToDefault}
+                    onSet={isList || isImage ? null : this.handleSet}
                     onSetModeToLarge={isList || isImage ? null : this.handleSetModeToLarge}
                     onSetModeToSlider={showSliderOption ? this.handleSetModeToSlider : null}
                     onSliderPromptOpen={this.handleSliderPromptOpen}

@@ -74,6 +74,14 @@ const MonitorComponent = props => (
                             id="gui.monitor.contextMenu.copy"
                         />
                     </BorderedMenuItem>}
+                {props.draggable && props.onHide &&
+                    <BorderedMenuItem onClick={props.onSet}>
+                        <FormattedMessage
+                            defaultMessage="set value"
+                            description="Menu item to hide the monitor"
+                            id="gui.monitor.contextMenu.set"
+                        />
+                    </BorderedMenuItem>}
                 {props.draggable && props.onSetModeToDefault &&
                     <MenuItem onClick={props.onSetModeToDefault}>
                         <FormattedMessage
