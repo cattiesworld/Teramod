@@ -151,31 +151,33 @@ const CustomFPS = props => (
         onChange={props.onChange}
         label={
             <FormattedMessage
-                defaultMessage="Custom Framerate"
+                defaultMessage="{customFramerate}"
                 description="FPS setting"
                 id="tw.settingsModal.fps"
-            />
-        }
-        help={
-            <FormattedMessage
-                // eslint-disable-next-line max-len
-                defaultMessage="Runs scripts 60 times per second instead of 30. Most projects will not work properly with this enabled. You should try Interpolation with 60 FPS mode disabled if that is the case. {customFramerate}."
-                description="FPS setting help"
-                id="tw.settingsModal.fpsHelp"
                 values={{
                     customFramerate: (
-                        <a
+                        <button
                             onClick={props.onCustomizeFramerate}
+                            className={styles.button}
                             tabIndex="0"
                         >
                             <FormattedMessage
-                                defaultMessage="Click to use a framerate other than 30 or 60"
+                                defaultMessage="Change Framerate"
                                 description="FPS settings help"
                                 id="tw.settingsModal.fpsHelp.customFramerate"
                             />
-                        </a>
+                        </button>
                     )
                 }}
+            />
+            
+        }
+        help={
+            <FormattedMessage
+                defaultMessage="Changes the framerate the Engine runs on."
+                description="FPS setting help"
+                id="tw.settingsModal.fpsHelp"
+                
             />
         }
         slug="custom-fps"
@@ -399,6 +401,17 @@ const CustomStageSize = ({
                         onClick={() => onStagePresetUsed(1)}
                     >
                         16:9
+                    </button>
+                    <br />
+                    Mobile Aspect Ratios
+                    <br />
+                    <button
+                        className={styles.customStageSizeButton}
+                        data-selected={stageWidth === 360 && stageHeight === 640}
+                        data-phonescreen={true}
+                        onClick={() => onStagePresetUsed(3)}
+                    >
+                        9:16
                     </button>
                 </div>
                 <div className={styles.customStageSizeContainer}>

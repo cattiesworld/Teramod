@@ -109,6 +109,12 @@ class UsernameModal extends React.Component {
         case 2:
             this.props.vm.setStageSize(360, 360);
             break;
+        case 3:
+            this.props.vm.setStageSize(360, 640);
+            break;
+        case 4:
+            this.props.vm.setStageSize(656, 303);
+            break;
         default:
             this.props.vm.setStageSize(480, 360);
             break;

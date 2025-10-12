@@ -118,6 +118,12 @@
 .custom-stage-size-button[data-widescreen="true"] {
     width: 224px;
 }
+.custom-stage-size-button[data-phonescreen="true"] {
+    width: 100px;
+}
+.custom-stage-size-button[data-phonebig="true"] {
+    width: 150px;
+}
 .custom-stage-size-button[data-square="true"] {
     width: 126px;
 }
