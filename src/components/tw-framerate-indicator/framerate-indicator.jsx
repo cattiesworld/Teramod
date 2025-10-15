@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {FormattedMessage} from 'react-intl';
 
 import styles from './framerate-indicator.css';
+import interIcon from './icon--interpolation.svg';
 
 const FramerateIndicator = ({framerate, interpolation}) => (
     <React.Fragment>
@@ -24,14 +25,22 @@ const FramerateIndicator = ({framerate, interpolation}) => (
         )}
         {interpolation && (
             <div className={styles.framerateContainer}>
+                <div className={styles.turboContainer}>
+                    <img
+                        className={styles.interIcon}
+                        src={interIcon}
+                        />
+                    </div>
                 <div className={styles.framerateLabel}>
-                    <FormattedMessage
+                    {/* <FormattedMessage
                         defaultMessage="Interpolation"
                         description="Label to indicate interpolation is enabled"
                         id="tw.interpolationEnabled"
-                    />
+                    /> */}
                 </div>
+
             </div>
+            
         )}
     </React.Fragment>
 );
