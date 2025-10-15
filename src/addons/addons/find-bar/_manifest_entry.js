@@ -16,6 +16,10 @@ const manifest = {
     {
       "name": "TheColaber",
       "link": "https://scratch.mit.edu/users/thecolaber/"
+    },
+    {
+      "name": "Mistium",
+      "link": "https://mistium.com"
     }
   ],
   "dynamicDisable": true,
@@ -29,8 +33,48 @@ const manifest = {
       "url": "userstyle.css"
     }
   ],
+  "settings": [
+    {
+      "dynamic": true,
+      "name": "Enable regex search",
+      "id": "enableRegex",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "dynamic": true,
+      "name": "Case sensitive search by default",
+      "id": "caseSensitive",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "dynamic": true,
+      "name": "Search across all sprites",
+      "id": "searchAllSprites",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "dynamic": true,
+      "name": "Show search context",
+      "id": "showContext",
+      "type": "boolean",
+      "default": true
+    },
+    {
+      "dynamic": true,
+      "name": "Max search history entries",
+      "id": "maxHistory",
+      "type": "integer",
+      "min": 5,
+      "max": 50,
+      "default": 20
+    }
+  ],
   "tags": [
-    "recommended"
+    "recommended",
+    "MistWarp"
   ],
   "enabledByDefault": true
 };
